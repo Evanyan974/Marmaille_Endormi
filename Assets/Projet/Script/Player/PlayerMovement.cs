@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.ShaderGraph;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     private InputSystem controls;
-    private Rigidbody2D rb;
+    private Rigidbody rb;
     private Vector3 moveInput; //raw input receptionné depuis la manette
     [SerializeField]
     private float speed = 1f;
@@ -15,8 +15,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float jumpForce = 5f;
 
+    [SerializeField] private float acceleration;
+    [SerializeField] private float decceleration;
+    [SerializeField] private float velocityPower;
+
     public InputSystem Controls { get => controls; set => controls = value; }
-    public Rigidbody2D Rb { get => rb; set => rb = value; }
+    public Rigidbody Rb { get => rb; set => rb = value; }
     public Vector3 MoveInput { get => moveInput; set => moveInput = value; }
     public float Speed { get => speed; set => speed = value; }
     public float NewSpeed { get => newSpeed; set => newSpeed = value; }
@@ -26,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Controls = new InputSystem();
 
-        Rb = GetComponent<Rigidbody2D>();
+        Rb = GetComponent<Rigidbody>();
 
         NewSpeed = Speed = speed;
         JumpForce = jumpForce;
@@ -53,6 +57,30 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(MoveInput.x * NewSpeed * Time.deltaTime, 0, MoveInput.z * NewSpeed * Time.deltaTime);
+        //transform.Translate(MoveInput.x * NewSpeed * Time.deltaTime, 0, MoveInput.z * NewSpeed * Time.deltaTime);
+
+        MovementNoByMe();
+    }
+
+
+
+
+    /// <summary>
+    /// Smoother Movement By Dawnosaur
+    /// </summary>
+    void MovementNoByMe()
+    {
+
+        float targetSpeed = moveInput.x * speed; // explicit
+        float speedDif = targetSpeed - rb.velocity.x; // drag ? 
+        float accelRate = (Mathf.Abs(targetSpeed) > 0.01f) ? acceleration : decceleration; // explicit
+        float movement = Mathf.Pow(Mathf.Abs(speedDif) * accelRate, velocityPower) * Mathf.Sign(speedDif); // application with direction by Math.Sign
+
+        /*if (!canMove) // NO MOVE !
+        {
+            movement = 0; // Moven't
+        }*/
+
+        rb.AddForce(movement * Vector2.right); // Player move !
     }
 }
