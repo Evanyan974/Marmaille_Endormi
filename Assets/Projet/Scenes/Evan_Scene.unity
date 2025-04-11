@@ -224,7 +224,7 @@ Transform:
   m_GameObject: {fileID: 229259173}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.3, y: 0.93, z: 3.64}
+  m_LocalPosition: {x: 5.3, y: 0.93, z: 4.622}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -243,6 +243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pouvoir: {fileID: 397648168}
+  FireBreahtingZone: {fileID: 0}
 --- !u!1 &254181728
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,7 +383,7 @@ Transform:
   m_GameObject: {fileID: 1044525031}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.5, y: 0.93, z: 3.64}
+  m_LocalPosition: {x: 8.5, y: 0.93, z: 4.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1092,6 +1093,11 @@ PrefabInstance:
     - target: {fileID: 3368349263158109789, guid: 6157a325442acd4458bb223d7781596f,
         type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3368349263158109789, guid: 6157a325442acd4458bb223d7781596f,
+        type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7049689348114120054, guid: 6157a325442acd4458bb223d7781596f,

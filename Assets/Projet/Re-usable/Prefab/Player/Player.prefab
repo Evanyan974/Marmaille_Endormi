@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6278145377818179119}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,6 +122,10 @@ MonoBehaviour:
   speed: 5
   newSpeed: 0
   jumpForce: 5
+  isGround: 0
+  acceleration: 0
+  decceleration: 0
+  velocityPower: 0
 --- !u!54 &6278145377818179119
 Rigidbody:
   m_ObjectHideFlags: 0
