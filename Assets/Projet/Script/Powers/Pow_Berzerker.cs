@@ -16,5 +16,9 @@ public class Pow_Berzerker : Power
         
     }
 
-    
+    protected override void OnCollisionEnter(Collision collision)
+    {
+        base.OnCollisionEnter(collision);
+        collision.gameObject.AddComponent<Pow_Berzerker>();
+    }
 }
