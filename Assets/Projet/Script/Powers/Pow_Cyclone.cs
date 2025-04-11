@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pow_Cyclone : MonoBehaviour
+public class Pow_Cyclone : Power
 {
     // Start is called before the first frame update
     void Start()

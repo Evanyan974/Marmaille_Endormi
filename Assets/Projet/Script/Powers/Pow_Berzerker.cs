@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pow_Berzerker : MonoBehaviour
+public class Pow_Berzerker : Power
 {
     // Start is called before the first frame update
     void Start()
@@ -15,4 +15,6 @@ public class Pow_Berzerker : MonoBehaviour
     {
         
     }
+
+    
 }
