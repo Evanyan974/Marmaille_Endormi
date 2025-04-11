@@ -10,6 +10,9 @@ public abstract class Ennemies : MonoBehaviour
     private float speed;
     private Transform player;
 
+    [SerializeField]
+    private GameObject pouvoir;
+
     public int Health { get => health; set => health = value; }
     public float DetectionRange { get => detectionRange; set => detectionRange = value; }
     public float Range { get => range; set => range = value; }
@@ -42,6 +45,12 @@ public abstract class Ennemies : MonoBehaviour
 
     public void DropPower()
     {
+        GameObject power = Instantiate(Pouvoir);
+        power.transform.position = this.transform.position;
+    }
 
+    public void OnDestroy()
+    {
+        DropPower();
     }
 }
