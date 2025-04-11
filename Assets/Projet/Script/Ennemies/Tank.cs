@@ -27,4 +27,12 @@ public class Tank : Ennemies
             Debug.Log("FEUUUUUUUUUUUU!!!!!");
         }
     }
+
+
+
+    public override void Start()
+    {
+        
+        new Tank(Health, DetectionRange, Range, Speed, Player, Pouvoir);
+    }
 }
