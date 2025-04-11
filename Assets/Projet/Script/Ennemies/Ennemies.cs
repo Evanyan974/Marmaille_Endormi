@@ -4,11 +4,11 @@ using UnityEngine;
 
 public  class Ennemies : MonoBehaviour
 {
-    private int health;
-    private float detectionRange;
-    private float range;
-    private float speed;
-    private Transform player;
+    [SerializeField] private int health;
+    [SerializeField] private float detectionRange;
+    [SerializeField] private float range;
+    [SerializeField] private float speed;
+    [SerializeField] private Transform player;
 
     [SerializeField]
     private GameObject pouvoir;
