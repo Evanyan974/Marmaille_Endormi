@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     private float newSpeed;
     [SerializeField]
     private float jumpForce = 5f;
+    [SerializeField] private bool isGround;
 
     [SerializeField] private float acceleration;
     [SerializeField] private float decceleration;
@@ -66,7 +67,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Jump()
     {
-        rb.AddForce(transform.up * jumpForce,ForceMode.Impulse);
+        if (isGround)
+        {
+            rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+        }
     }
 
 
@@ -87,5 +91,22 @@ public class PlayerMovement : MonoBehaviour
         }*/
 
         rb.AddForce(movement * Vector2.right); // Player move !
+    }
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isGround = true;
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isGround = false;
+        }
     }
 }
