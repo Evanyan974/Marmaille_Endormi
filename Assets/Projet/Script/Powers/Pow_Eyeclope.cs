@@ -15,4 +15,10 @@ public class Pow_Eyeclope : Power
     {
         
     }
+
+    protected override void OnCollisionEnter(Collision collision)
+    {
+        base.OnCollisionEnter(collision);
+        collision.gameObject.AddComponent<Pow_Eyeclope>();
+    }
 }

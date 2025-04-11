@@ -16,7 +16,7 @@ public class Power : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision)
+    protected virtual void OnCollisionEnter(Collision collision)
     {
         collision.gameObject.GetComponent<MeshRenderer>().material.color = this.gameObject.GetComponent<MeshRenderer>().material.color;
     }
