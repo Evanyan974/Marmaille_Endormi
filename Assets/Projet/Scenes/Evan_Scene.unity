@@ -1533,7 +1533,7 @@ PrefabInstance:
     - target: {fileID: 1298740911325667862, guid: 25297dad3abe3dc4eaaf28e312800545,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 521
+      value: 527
       objectReference: {fileID: 0}
     - target: {fileID: 4530359590380445294, guid: 25297dad3abe3dc4eaaf28e312800545,
         type: 3}
@@ -1544,6 +1544,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FireBreathingZone
+      objectReference: {fileID: 0}
+    - target: {fileID: 8237226492234192074, guid: 25297dad3abe3dc4eaaf28e312800545,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 775045978}
+    - target: {fileID: 8237226492234192074, guid: 25297dad3abe3dc4eaaf28e312800545,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8237226492234192074, guid: 25297dad3abe3dc4eaaf28e312800545,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
