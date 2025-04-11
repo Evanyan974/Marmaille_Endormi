@@ -70,3 +70,5 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+Assets/Projet/Imports/Ennemie_asset_SEB/Assets/DragonWalk.fbx
+Assets/Projet/Imports/Ennemie_asset_SEB/Assets/kidoleonWalk.fbx
