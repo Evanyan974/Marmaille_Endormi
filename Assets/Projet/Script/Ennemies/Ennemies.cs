@@ -20,11 +20,12 @@ public abstract class Ennemies : MonoBehaviour
     public float Speed {get => speed; set => speed = value; }
 
     public Transform Player { get => player; set => player = value; }
-
+    public GameObject Pouvoir { get => pouvoir; set => pouvoir = value; }
 
     public void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player").transform;
+        Pouvoir = pouvoir;
     }
 
 
