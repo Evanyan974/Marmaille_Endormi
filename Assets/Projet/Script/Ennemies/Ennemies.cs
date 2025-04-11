@@ -32,6 +32,10 @@ public  class Ennemies : MonoBehaviour
     public void Patrol()
     {
 
+
+
+
+
     }
 
     public void Hit()
@@ -40,6 +44,32 @@ public  class Ennemies : MonoBehaviour
 
 
     }
+
+    public void TakeDammage(int amount)
+    {
+        if (Health - amount < 0)
+        {
+            Health = 0;
+        }
+        else if (Health - amount < 0)
+        {
+            Health = 1;
+        }
+        else
+        {
+            Health -= amount;
+
+        }
+
+
+    }
+
+
+
+
+
+
+
 
     public virtual void Attack(float detectionRange, float range)
     {
