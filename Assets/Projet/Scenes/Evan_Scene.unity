@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 229259176}
   - component: {fileID: 229259175}
   - component: {fileID: 229259174}
+  - component: {fileID: 229259178}
   m_Layer: 0
   m_Name: Dragon
   m_TagString: Untagged
@@ -229,6 +230,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &229259178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229259173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12d8e32599774488a6eae878253dbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pouvoir: {fileID: 397648168}
 --- !u!1 &254181728
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,6 +274,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &397648168 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2081588576951612334, guid: 5c08fa800a2ed944b84f230358ee8888,
+    type: 3}
+  m_PrefabInstance: {fileID: 3878239109052824347}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1044525031
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,6 +292,7 @@ GameObject:
   - component: {fileID: 1044525034}
   - component: {fileID: 1044525033}
   - component: {fileID: 1044525032}
+  - component: {fileID: 1044525036}
   m_Layer: 0
   m_Name: Tank
   m_TagString: Untagged
@@ -367,6 +388,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1044525036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044525031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a646e5bf76c369243bc5a7ebe5b2a7ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pouvoir: {fileID: 2041036739}
 --- !u!1 &1112632277
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,6 +617,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2041036739 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8547629818791217344, guid: be6e0e9bb7dc89e42afe38c6dc8ae016,
+    type: 3}
+  m_PrefabInstance: {fileID: 746014726345785145}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2095140120
 GameObject:
   m_ObjectHideFlags: 0
@@ -1261,6 +1301,6 @@ SceneRoots:
   - {fileID: 7458066736544637388}
   - {fileID: 746014726345785145}
   - {fileID: 3075064819741618142}
+  - {fileID: 254181729}
   - {fileID: 229259177}
   - {fileID: 1044525035}
-  - {fileID: 254181729}
