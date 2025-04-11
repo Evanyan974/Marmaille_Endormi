@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Power : MonoBehaviour
 {
+    [SerializeField] int hp;
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {
