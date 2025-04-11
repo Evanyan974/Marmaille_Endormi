@@ -43,6 +43,8 @@ public class PlayerMovement : MonoBehaviour
         Controls.Player.Move.performed += ctx => MoveInput = ctx.ReadValue<Vector3>();
         Controls.Player.Move.canceled += ctx => MoveInput = Vector3.zero;
 
+        Controls.Player.Jump.performed += ctx => Jump();
+
         // Enable l'InputAction
         controls.Enable();
     }
@@ -62,7 +64,10 @@ public class PlayerMovement : MonoBehaviour
         MovementNoByMe();
     }
 
-
+    void Jump()
+    {
+        rb.AddForce(transform.up * jumpForce,ForceMode.Impulse);
+    }
 
 
     /// <summary>
