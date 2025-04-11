@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Ennemies : MonoBehaviour
+public  class Ennemies : MonoBehaviour
 {
     private int health;
     private float detectionRange;
@@ -41,7 +41,14 @@ public abstract class Ennemies : MonoBehaviour
 
     }
 
-    public abstract void Attack(float detectionRange, float range);
+    public virtual void Attack(float detectionRange, float range)
+    {
+        if (Vector3.Distance(transform.position, Player.position) < detectionRange)
+        {
+            Vector3 direction = (Player.position - transform.position).normalized;
+            transform.position += direction * Speed * Time.deltaTime;
+        }
+    }
     
 
     public void DropPower()

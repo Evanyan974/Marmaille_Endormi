@@ -6,6 +6,10 @@ public class Tank : Ennemies
 {
     public override void Attack(float detectionRange, float range)
     {
-        throw new System.NotImplementedException();
+        base.Attack(detectionRange, range);
+        if (Vector3.Distance(transform.position, Player.position) < detectionRange)
+        {
+            Debug.Log("Graouh!Crachage de feu ");
+        }
     }
 }
