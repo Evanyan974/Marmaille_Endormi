@@ -22,7 +22,7 @@ public  class Ennemies : MonoBehaviour
     public Transform Player { get => player; set => player = value; }
     public GameObject Pouvoir { get => pouvoir; set => pouvoir = value; }
 
-    public void Start()
+    public virtual void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player").transform;
         Pouvoir = pouvoir;
