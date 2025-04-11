@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class Dragon : Ennemies
 {
+    [SerializeField] private GameObject FireBreahtingZone;
+
+
+
+
+
+
     public override void Attack(float detectionRange, float range)
     {
-        if (Vector3.Distance(transform.position, Player.position) < detectionRange)
+        base.Attack(detectionRange, range);
+        if(Vector3.Distance(transform.position, Player.position) < detectionRange)
         {
-            Vector3 direction = (Player.position - transform.position).normalized;
-            transform.position += direction * Speed * Time.deltaTime;
-
-
-
+            Debug.Log("Graouh!Crachage de feu ");
         }
+        
     }
 }
